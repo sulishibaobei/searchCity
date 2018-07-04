@@ -1,0 +1,118 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    color: #4A4A4A;
+    background-color: #F5F5F5;
+}
+
+html {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fr {
+    float: right;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.mt10 {
+    margin-top: 0.2rem;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    zoom: 1;
+}
+
+.mb10 {
+    margin-bottom: 0.2rem;
+}
+
+.relative {
+    position: relative;
+}
+
+input,
+select,
+button {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    border: none;
+    background: 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.mr10 {
+    margin-right: 0.2rem;
+}
+
+.display-box {
+    display: -webkit-box;
+    /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box;
+    /* Firefox 17- */
+    display: -webkit-flex;
+    /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex;
+    /* Firefox 18+ */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: flex;
+    /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+
+.box-one {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.box-nine {
+    -webkit-box-flex: 9;
+    -webkit-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
+}

@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/*
+选择城市
+*/
+
+header {
+    display: box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    font-size: 0.34rem;
+    height: 0.88rem;
+    line-height: 0.64rem;
+    padding: 0.14rem 0;
+    color: #333;
+    letter-spacing: 0.12px;
+    background-color: #F5F5F5;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.head-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+}
+
+.city-search-wrap {
+    width: 100%;
+    border-radius: 0.34rem;
+}
+
+#city-search {
+    margin: 0 0.3rem;
+    position: relative;
+}
+
+.city-search-wrap .icon-search {
+    position: absolute;
+    width: 0.28rem;
+    height: 0.28rem;
+    left: 0.24rem;
+    top: 0.16rem;
+    z-index: 10;
+    background: url(../images/home_nav_search.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.city-search-wrap .ser-txt {
+    position: relative;
+    width: 100%;
+    padding: 0 0.2rem 0 0.71rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    color: #333333;
+    border: none;
+    box-sizing: border-box;
+    font-size: 0.28rem;
+    outline: none;
+    background: #F2F2F2;
+    border-radius: 0.34rem;
+}
+
+.city-search-wrap .ser-txt::-webkit-input-placeholder {
+    color: #C2C0C0;
+}
+
+.choose-city-wrap {
+    width: 100%;
+    margin-top: 0.97rem;
+    overflow: hidden;
+}
+
+.city-list-title {
+    font-size: 0.24rem;
+    color: #9C9FA1;
+    margin-bottom: 0.23rem;
+    margin-top: 0.23rem;
+    margin-left: 0.4rem;
+}
+
+.city-list {
+    position: relative;
+}
+
+.city-list:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.city-list:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.nowCity {
+    font-size: 0.32rem;
+    color: #394043;
+    width: 100%;
+    height: 1.02rem;
+    padding-left: 0.4rem;
+    line-height: 1.02rem;
+    background: #FFFFFF;
+    display: inline-block;
+    position: relative;
+}
+
+.nowCity i:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0.4rem;
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.nowCity:last-child i:after {
+    height: 0px;
+}
+
+.choose-city-chart {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.24rem;
+    padding: 2.97rem 0.32rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.choose-city-chart a {
+    display: block;
+    font-size: 0.24rem;
+    color: #394043;
+    line-height: 0.40rem;
+}
+
+
+/*遮罩*/
+
+.city-search-list {
+    display: none;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.city-search-list .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.40);
+    display: none;
+}
+
+.city-search-list .search-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding-left: 0.3rem;
+    padding-top: 0.88rem;
+}
+
+.city-search-list .search-list:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0.88rem;
+    left: 0;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+    background: rgba(199, 199, 199, 0.50);
+}
+
+.city-search-list .search-list>a {
+    position: relative;
+    display: block;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.26rem;
+    color: #333;
+}
+
+.city-search-list .search-list>a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+    background: #D8D8D8;
+}
+
+.city-list a {
+    float: left;
+    width: 1.98rem;
+    height: 0.64rem;
+    margin: 0.14rem 0.3rem 0.14rem 0;
+    line-height: 0.64rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #ffffff;
+    font-size: 0.28rem;
+    color: #232626;
+    text-align: center;
+}
+
+.seekFailed {
+    width: 0.36rem;
+    height: 0.36rem;
+    margin-left: 0.1rem;
+    position: absolute;
+    top: 35%;
+}

@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>选择城市</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/chooseCity.css">
+
+    <script>
+        //自适应屏幕大小 
+        (function() {
+            var docEle = document.documentElement,
+                evt = "onorientationchange" in window ? "orientationchange" : "",
+                fn = function() {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = width / 7.5 + "px");
+                };
+            fn();
+            if (window.addEventListener) {
+                if (evt) {
+                    window.addEventListener(evt, fn, false);
+                }
+                window.addEventListener("resize", fn, false);
+                document.addEventListener("DOMContentLoaded", fn, false);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="head-fixed" style="background: #FFFFFF;">
+        <div class="city-search-wrap">
+            <div id="city-search">
+                <i class="sprite-search icon-search"></i>
+                <input type="text" class="ser-txt" placeholder="请输入城市名" id="searchContext" maxlength="50">
+            </div>
+        </div>
+    </header>
+    <section class="choose-city-wrap">
+        <div class="box">
+            <div class="city-list-title">当前城市</div>
+            <div class="city-list clear">
+                <span class="nowCity chooseCity" style="display: none">深圳</span>
+                <span class="nowCity">定位失败<img src="images/circle@2x.png" class='seekFailed' /></span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="A">A</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="B">B</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="C">C</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="D">D</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="F">F</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="H">H</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="G">G</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="广州">广州<i></i></span>
+                <span class="nowCity" data-name="贵阳">贵阳<i></i></span>
+                <span class="nowCity" data-name="赣州">赣州<i></i></span>
+                <span class="nowCity" data-name="贵港">贵港<i></i></span>
+                <span class="nowCity" data-name="桂林">桂林</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="city-list-title" id="J">J</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+        <div class="choose-city-chart">
+            <a href="javascript:void(0);">#</a>
+            <a href="javascript:void(0);" data-key="A">A</a>
+            <a href="javascript:void(0);" data-key="B">B</a>
+            <a href="javascript:void(0);" data-key="C">C</a>
+            <a href="javascript:void(0);" data-key="D">D</a>
+            <a href="javascript:void(0);" data-key="F">F</a>
+            <a href="javascript:void(0);" data-key="G">G</a>
+            <a href="javascript:void(0);" data-key="H">H</a>
+            <a href="javascript:void(0);" data-key="J">J</a>
+        </div>
+    </section>
+    <div class="city-search-list">
+        <div class="mask"></div>
+        <div class="search-list">
+            <a name="city" data-code="null" data-name="惠州">惠州</a>
+            <a name="city" data-code="null" data-name="深圳">深圳</a>
+            <a name="city" data-code="null" data-name="广州">广州</a>
+        </div>
+    </div>
+</body>
+<script src="https://front.leyoujia.com/js/jquery.js"></script>
+<script src='https://alicdn.leyoujia.com/wap/js/jslib/fastclick.js?v=1525056886926'></script>
+<script>
+    $("#searchContext").on("focus", function() {
+        $(".city-search-list").show();
+        $(".city-search-list .mask").show();
+        $("body").css('overflow', 'hidden');
+        $(".city-search-list .search-list").hide();
+    }).on("input propertychange", function() {
+        var val = $.trim($(this).val());
+        if (val == "") {
+            $(".city-search-list .mask").show();
+            $("body").css('overflow', 'hidden');
+            $(".city-search-list .search-list").hide();
+            return;
+        }
+        $(".city-search-list .search-list").show();
+    })
+    $(".city-search-list .mask").on("click", function() {
+        $(".city-search-list").hide();
+        $("body").css('overflow-y', 'auto');
+    });
+
+    // 字母定位
+    $(".choose-city-chart").on("click", "a", function() {
+        var key = $(this).data("key");
+        $("body,html").animate({
+            "scrollTop": $("#" + key).offset().top - $(".head-fixed").outerHeight() - 10
+        }, 100);
+    });
+
+    $("body").on("click", "span.nowCity", function() {
+        var val = $(this).data('name');
+        $(".chooseCity").show().html(val).css('color', 'red');
+        $(".chooseCity").next().hide();
+        $("body,html").animate({
+            "scrollTop": $(".chooseCity").offset().top - $(".head-fixed").outerHeight() - 10
+        }, 100);
+
+    })
+</script>
+
+</html>
