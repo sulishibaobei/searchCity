@@ -172,6 +172,10 @@ header {
     line-height: 0.40rem;
 }
 
+a.curr {
+    color: #e03236;
+}
+
 
 /*遮罩*/
 

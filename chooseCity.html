@@ -29,6 +29,7 @@
             }
         })();
     </script>
+
 </head>
 
 <body>
@@ -89,14 +90,6 @@
             </div>
         </div>
         <div class="box">
-            <div class="city-list-title" id="H">H</div>
-            <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
-            </div>
-        </div>
-        <div class="box">
             <div class="city-list-title" id="G">G</div>
             <div class="city-list clear">
                 <span class="nowCity" data-name="广州">广州<i></i></span>
@@ -107,6 +100,15 @@
             </div>
         </div>
         <div class="box">
+            <div class="city-list-title" id="H">H</div>
+            <div class="city-list clear">
+                <span class="nowCity" data-name="北京">北京<i></i></span>
+                <span class="nowCity" data-name="深圳">深圳<i></i></span>
+                <span class="nowCity" data-name="沈阳">沈阳</span>
+            </div>
+        </div>
+
+        <div class="box">
             <div class="city-list-title" id="J">J</div>
             <div class="city-list clear">
                 <span class="nowCity" data-name="北京">北京<i></i></span>
@@ -116,7 +118,7 @@
         </div>
         <div class="choose-city-chart">
             <a href="javascript:void(0);">#</a>
-            <a href="javascript:void(0);" data-key="A">A</a>
+            <a href="javascript:void(0);" data-key="A" class="curr">A</a>
             <a href="javascript:void(0);" data-key="B">B</a>
             <a href="javascript:void(0);" data-key="C">C</a>
             <a href="javascript:void(0);" data-key="D">D</a>
@@ -164,6 +166,10 @@
         $("body,html").animate({
             "scrollTop": $("#" + key).offset().top - $(".head-fixed").outerHeight() - 10
         }, 100);
+        $(this).addClass('curr').siblings('a').removeClass('curr');
+        if ($(document).height() == $('body').height() + $(window).scrollTop()) {
+            $(this).addClass('curr').siblings('a').removeClass('curr');
+        }
     });
 
     $("body").on("click", "span.nowCity", function() {
@@ -173,7 +179,24 @@
         $("body,html").animate({
             "scrollTop": $(".chooseCity").offset().top - $(".head-fixed").outerHeight() - 10
         }, 100);
+    })
 
+    $(window).scroll(function() {
+        var scrollTop = $(document).scrollTop();
+        var oItem = $(".choose-city-wrap").find('.box');
+        var oName = '';
+        $.each(oItem, function(i) {
+            var oneItem = $(this);
+            if (i == 0) {
+                return;
+            }
+            var offsetTop = oneItem.offset().top;
+            if (offsetTop - scrollTop < oneItem.prev().height()) {
+                oName = oneItem.find('.city-list-title').attr("id");
+                $(".choose-city-chart a.curr").removeClass("curr");
+                $(".choose-city-chart").find("[data-key=" + oName + "]").addClass("curr");
+            }
+        })
     })
 </script>
 
