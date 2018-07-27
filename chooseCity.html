@@ -191,15 +191,12 @@
         $(".city-search-list").hide();
         $("body").css('overflow-y', 'auto');
     });
-
     $("#searchList").on('click','a',function(){
         $(".chooseCity").html($(this).html());
         $(".city-search-list .search-list").hide();
          $(".city-search-list .mask").hide();
+         $("body").css('overflow-y', 'auto');
     })
-
-
-
 
     // 字母定位
     $(".choose-city-chart").on("click", "a", function() {
@@ -222,7 +219,6 @@
         }, 100);
     })
 
- 
     $(window).scroll(function() {
         var scrollTop = $(document).scrollTop();
         var oItem = $(".choose-city-wrap").find('.box');
