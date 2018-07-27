@@ -9,7 +9,6 @@
     <title>选择城市</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/chooseCity.css">
-
     <script>
         //自适应屏幕大小 
         (function() {
@@ -45,48 +44,50 @@
         <div class="box">
             <div class="city-list-title">当前城市</div>
             <div class="city-list clear">
-                <span class="nowCity chooseCity" style="display: none">深圳</span>
-                <span class="nowCity">定位失败<img src="images/circle@2x.png" class='seekFailed' /></span>
+                <span class="nowCity chooseCity">深圳</span>
+                <span class="nowCity" style="display:none">定位失败<img src="images/circle@2x.png" class='seekFailed'  /></span>
             </div>
         </div>
         <div class="box">
             <div class="city-list-title" id="A">A</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="鞍山">鞍山<i></i></span>
+                <span class="nowCity" data-name="安阳">安阳<i></i></span>
+                <span class="nowCity" data-name="安庆">安庆</span>
             </div>
         </div>
         <div class="box">
             <div class="city-list-title" id="B">B</div>
             <div class="city-list clear">
                 <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="北海">北海<i></i></span>
+                <span class="nowCity" data-name="宝鸡">宝鸡<i></i></span>
+                <span class="nowCity" data-name="本溪">本溪</span>
             </div>
         </div>
         <div class="box">
             <div class="city-list-title" id="C">C</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="长沙">长沙<i></i></span>
+                <span class="nowCity" data-name="潮州">潮州<i></i></span>
+                <span class="nowCity" data-name="成都">成都<i></i></span>
+                <span class="nowCity" data-name="长春">长春</span>
             </div>
         </div>
         <div class="box">
             <div class="city-list-title" id="D">D</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="东莞">东莞<i></i></span>
+                <span class="nowCity" data-name="大连">大连<i></i></span>
+                <span class="nowCity" data-name="达州">达州</span>
             </div>
         </div>
         <div class="box">
             <div class="city-list-title" id="F">F</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="佛山">佛山<i></i></span>
+                <span class="nowCity" data-name="抚顺">抚顺<i></i></span>
+                <span class="nowCity" data-name="福州">福州</span>
             </div>
         </div>
         <div class="box">
@@ -102,18 +103,19 @@
         <div class="box">
             <div class="city-list-title" id="H">H</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="惠州">惠州<i></i></span>
+                <span class="nowCity" data-name="杭州">杭州<i></i></span>
+                <span class="nowCity" data-name="呼和浩特">呼和浩特<i></i></span>
+                <span class="nowCity" data-name="海口">海口</span>
             </div>
         </div>
 
         <div class="box">
             <div class="city-list-title" id="J">J</div>
             <div class="city-list clear">
-                <span class="nowCity" data-name="北京">北京<i></i></span>
-                <span class="nowCity" data-name="深圳">深圳<i></i></span>
-                <span class="nowCity" data-name="沈阳">沈阳</span>
+                <span class="nowCity" data-name="江门">江门<i></i></span>
+                <span class="nowCity" data-name="揭阳">揭阳<i></i></span>
+                <span class="nowCity" data-name="九江">九江</span>
             </div>
         </div>
         <div class="choose-city-chart">
@@ -130,16 +132,20 @@
     </section>
     <div class="city-search-list">
         <div class="mask"></div>
-        <div class="search-list">
-            <a name="city" data-code="null" data-name="惠州">惠州</a>
-            <a name="city" data-code="null" data-name="深圳">深圳</a>
-            <a name="city" data-code="null" data-name="广州">广州</a>
+        <div class="search-list" id="searchList">
+            <!-- <a name="city" data-code="null" data-name="惠州">惠州</a> -->
         </div>
     </div>
+    <input style="display:none" id="valC"  /> 
 </body>
-<script src="https://front.leyoujia.com/js/jquery.js"></script>
-<script src='https://alicdn.leyoujia.com/wap/js/jslib/fastclick.js?v=1525056886926'></script>
+<script src="jquery.js"></script>
+<script src='fastclick.js'></script>
+<script src="pinyin.js"></script>
 <script>
+/**
+* 一般来说，录数据库的会输入助力码  例如 惠州 hz
+*/
+    var city=[];
     $("#searchContext").on("focus", function() {
         $(".city-search-list").show();
         $(".city-search-list .mask").show();
@@ -153,12 +159,47 @@
             $(".city-search-list .search-list").hide();
             return;
         }
-        $(".city-search-list .search-list").show();
+        //1.如果输入的是拼音  匹配首字母   2.输入的字，匹配所有含有字的
+          val = val.toUpperCase();
+         $("#searchList").html("");
+        if (val.length == 1) {
+            var id = $(".city-list-title[id=" + val + "]");
+            if (id.length == 0) {
+                $("#searchList").html('<span  style="font-size:0.28rem;margin-top:10px;display:block">暂无匹配结果</span>');
+            } else if (id.length == 1) {
+                city=[];
+                var obj=id.next().find('span');
+                for(var i=0;i<obj.length;i++){
+                     $("#searchList").append(' <a name="city" data-code="null" data-name='+obj.eq(i).attr('data-name')+'>'+obj.eq(i).attr('data-name')+'</a>');
+                     city.push(obj.eq(i).attr('data-name'));
+                }    
+            }
+        }else if(val.length>=2){
+            for(var i=0;i<city.length;i++){
+                if(getPinYinFirstCharacter(city[i],"",true).indexOf(val)>-1){
+                  $("#searchList").append(' <a name="city" data-code="null" data-name='+city[i]+'>'+city[i]+'</a>');
+                }
+            }
+        }else{
+            $("#searchList").html('<span  style="font-size:0.28rem;margin-top:10px;display:block">暂无匹配结果</span>');
+        }
+       $(".city-search-list .search-list").show();
     })
+
+
     $(".city-search-list .mask").on("click", function() {
         $(".city-search-list").hide();
         $("body").css('overflow-y', 'auto');
     });
+
+    $("#searchList").on('click','a',function(){
+        $(".chooseCity").html($(this).html());
+        $(".city-search-list .search-list").hide();
+         $(".city-search-list .mask").hide();
+    })
+
+
+
 
     // 字母定位
     $(".choose-city-chart").on("click", "a", function() {
@@ -181,6 +222,7 @@
         }, 100);
     })
 
+ 
     $(window).scroll(function() {
         var scrollTop = $(document).scrollTop();
         var oItem = $(".choose-city-wrap").find('.box');
@@ -198,6 +240,8 @@
             }
         })
     })
+
+ 
 </script>
 
 </html>
